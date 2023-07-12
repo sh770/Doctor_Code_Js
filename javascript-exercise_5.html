@@ -152,7 +152,15 @@ if (firstNum === secNum) {
     <script src="src/prism.min.js"></script>
     <script>
       const onSolution = () => {
-        /* todo remove this line and start your answer */
+        let numA = +prompt("הכנס מספר ראשון")
+        let numB = +prompt("הכנס מספר ראשון")
+        if(numA > numB){
+          console.log("number 1 is big");
+        }else if(numA === numB){
+          console.log("numbers is eqel");
+        }else{
+          console.log("number 2 is big");
+        }
       };
     </script>
     <script>

@@ -153,6 +153,15 @@ console.log('Final bitcoin balance is: ', btcAmount)
     <script>
       const onSolution = () => {
         /* todo remove this line and start your answer */
+        let myBit = +prompt("מה יתרת המטבע שלך")
+        if(myBit >= 1){
+          let huMch = +prompt("כמה אתה רוצה למשוך")
+          if(myBit > huMch){
+            console.log(myBit - huMch); 
+          }else{
+            console.log("no mony on acaunt");
+          }
+        }
       };
     </script>
     <script>
