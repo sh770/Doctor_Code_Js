@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>גאווה סקריפט פרוייקט גמר ב' משחק קלפים דוטא 2</title>
+
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_dota.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_dota.html"
+    />
+    <meta
+      property="og:title"
+      content="ג'אווה סקריפט המדריך המלא 2023 - פרוייקט גמר משחק קלפים דוטא 2"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - פרוייקט גמר משחק קלפים דוטא 2"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ג'אווה סקריפט המדריך המלא 2023 - פרוייקט גמר משחק קלפים דוטא 2"
+    />
+    <meta
+      name="description"
+      content="במבחן הסיכום נלמד לשלב את כל מה שלמדנו עד כה, נלמד להשתמש בעיצוב ובנייה באמצעות CSS כתיבת לוגיקות מסובכות עם פונקציות ורקורסיה."
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h battle">
+      <div class="container">
+        <div style="width: 100%; display: flex; justify-content: center">
+          <img src="./resources/dota-2.webp" alt="" height="320" />
+        </div>
+      </div>
+    </section>
+
+    <section class="semi-h">
+      <div class="container">
+        <h1 class="x5 padding-top bold">פרוייקט גמר ב' - קורס ג'אווה סקריפט</h1>
+        <div class="separator green"></div>
+
+        <div class="padding-top">
+          <p>
+            1. דבר ראשון, כנסו וצפו בעיצוב המלא באתר פיגמה, תקבלו השראה ותנסו
+            להבין איך אתם הולכים לפרק את העיצוב ולבנות את המשחק באופן הכי נכון.
+          </p>
+          <p>
+            2. לאחר שהבנתם ואתם מוכנים להרפתקאה, תורידו את קבצי הפרוייקט ההתחלתי
+            על ידי לחיצה על כפתור ההורדה
+          </p>
+          <p>
+            3. אתם יותר ממוזמנים לנסות לשחק במשחק ולהבין את החוקיות, כי אין כמו
+            2 דקות משחק כדי להבין בידיוק מה עליכם לעשות.
+          </p>
+          <p>
+            4. אחרי שראיתם את העיצוב ושיחקתם במשחק עצמו הגיע הזמן להתחיל לקרוא
+            את ההוראות להכנה!
+          </p>
+        </div>
+
+        <div class="navigation-buttons padding-top">
+          <a
+            href="https://github.com/drcodecamp/js-course-dota2/archive/refs/heads/master.zip"
+            target="_blank"
+          >
+            <div class="custom-button">הורדת קבצים</div>
+          </a>
+          <a
+            href="https://www.figma.com/file/17awHp4AqZP1aleXdL67nj/Dota-challenge?node-id=3%3A2&t=ElasVljGJ1VemJKs-0"
+            target="_blank"
+          >
+            <div class="custom-button">צפייה בעיצוב</div>
+          </a>
+          <a
+            href="https://drcodecamp.github.io/js-course-dota2/"
+            target="_blank"
+          >
+            <div class="custom-button">לינק למשחק</div>
+          </a>
+          <a
+            href="https://github.com/drcodecamp/js-course-dota2"
+            target="_blank"
+          >
+            <div class="custom-button">לינק לפתרון</div>
+          </a>
+        </div>
+
+        <div class="padding-top">
+          <h2 class="xl">מטרת המשחק</h2>
+          <p class="padding-top">
+            מטרת העל של המשחק היא לבחור חמישה דמויות מספיק טובות שיחד יהיו מספיק
+            טובות כדי לנצח את הקבוצה של המחשב,זהו משחק מבוסס תורות, שמזכיר קצת
+            משחקי קלפים כמו יוגיהו וכו', בכל תור השחקן יאלץ לבחור איזה דמות של
+            המחשב ברצונו להתקיף או להגן ועל ידי הבחירה הנכונה של מתי להגן ומתי
+            לתקוף להביס את כל דמויות המחשב.
+          </p>
+        </div>
+
+        <!-- A Section !-->
+        <div class="padding-top">
+          <h2 class="xl">
+            עמוד הבית <span class="orange-f">(index.html)</span>
+          </h2>
+          <div class="separator green"></div>
+
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="100%"
+            height="450"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FVQYN8QqJbLPnVs2G6pHrBf%2Fdota-game%3Fnode-id%3D1%253A466%26t%3DJBtnuTel5ejONKzi-1"
+            allowfullscreen
+          ></iframe>
+          <ul>
+            <li>
+              <span class="function-color">אופציות controller</span> - האופציה
+              היחידה במסך הזה היא להתחיל את המשחק.
+            </li>
+            <li>
+              <span>לוגיקה model</span> - מסך זה הוא הראשון שהמשתמש רואה לכן
+              במסך זה חשוב לטעון את כל הדמויות ולשמור אותם לתוך ה localStorage
+              כך שבמסכים הבאים נוכל כבר להשתמש ברשימת הדמויות.
+            </li>
+            <li>
+              <span class="variable-color">תצוגה view</span> - במסך זה יופיעו
+              תמונות רקע, הכפתור ולוגו המשחק דוטא 2.
+            </li>
+          </ul>
+        </div>
+        <!-- B Section !-->
+        <div style="padding-top: 50px">
+          <h2 class="xl">
+            עמוד בחירה <span class="orange-f">(selection.html)</span>
+          </h2>
+          <div class="separator green"></div>
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="100%"
+            height="450"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FVQYN8QqJbLPnVs2G6pHrBf%2Fdota-game%3Fnode-id%3D1%253A185%26t%3DJBtnuTel5ejONKzi-1"
+            allowfullscreen
+          ></iframe>
+          <ul>
+            <li>
+              <span class="function-color">אופציות controller</span> - בעמוד
+              הבחירה המשתמש יכול באמצעות העכבר להצביע על דמויות, בכל הקלקה על
+              דמות נראה את הדמות עם הפרטים המלאים עליה במסך תצוגה מצד ימין.
+            </li>
+            <li>
+              <span class="function-color">אופציות controller</span> - בעמוד זה
+              ישנם כפתורי סינון שמאפשרים לנו לסנן את הדמויות לפי סוג ההתקפה
+              range / melee.
+            </li>
+            <li>
+              <span>לוגיקה model</span> - תחילה נריץ טיימר בן 20 שניות, שזה הוא
+              הזמן שבו עלינו לבחור את הדמויות שאיתם נרצה לשחק עבורנו ועבור
+              המחשב, אם הזמן מגיע ל 0 ולא נבחרו חמישה דמויות עבורנו ועבור המחשב
+              נעביר את המשתמש חזרה למסך הראשי.
+            </li>
+            <li>
+              <span>לוגיקה model</span> - ברגע שהטיימר מגיע ל0 ויש לנו 2 קבוצות
+              מלאות, המודל יעביר אותנו עמוד לעמוד המשחק.
+            </li>
+            <li>
+              <span>לוגיקה model</span> - בכל לחיצה על דמות נראה את הדמות במסך
+              התצוגה המקדימה, נוכל לבחור אותה באמצעות כפתור pick hero.
+            </li>
+            <li>
+              <span>לוגיקה model</span> - בחירת הדמות תעשה רק במידה והדמות לא
+              נבחרה קודם לכן, יש להוסיף כפתור בשם random אשר יאפשר לבחור דמות
+              רנדומלית מתוך הדמויות שעדיין לא נבחרו כמובן שנצטרך פה שימוש
+              בפונקציית ריקורסיה.
+            </li>
+            <li>
+              <span class="variable-color">תצוגה view</span> - קובץ הדמויות לא
+              מגיע מפולטר לפי סוג הדמות, לכן יש לפלטר את הדמויות לפי סוג הדמות
+              ולהראות שלושה סקשיינים שונים שבכל סקשיין יש דמויות מאותו הסוג. str
+              / agi / int.
+            </li>
+            <li>
+              <span class="variable-color">תצוגה view</span> - יש להציג 10
+              סלוטים בחלק העליון של המסך, החמישה הראשונים הם עבור הדמויות של
+              המשתמש והחמישה הבאים עבור הדמויות של המחשב.
+            </li>
+            <li>
+              <span class="variable-color">תצוגה view</span> - בכל פעם שאנחנו
+              בוחרים דמות הסלוט הבא מתמלא משמע תחילה נבחר חמישה דמויות לנו ורק
+              לאחר מכן למחשב.
+            </li>
+          </ul>
+        </div>
+        <!-- C Section !-->
+        <div style="padding-top: 50px">
+          <h2 class="xl">
+            עמוד המשחק <span class="orange-f">(game.html)</span>
+          </h2>
+          <div class="separator green"></div>
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="100%"
+            height="450"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FVQYN8QqJbLPnVs2G6pHrBf%2Fdota-game%3Fnode-id%3D1%253A367%26t%3DJBtnuTel5ejONKzi-1"
+            allowfullscreen
+          ></iframe>
+          <ul>
+            <li>
+              <span class="function-color">אופציות control</span> - עמוד זה
+              יאפשר למשתמש להתחיל לשחק במשחק מבוסס תורות, המסך יאפשר לשחקן בתורו
+              לבחור דמות אחת מחמשת הדמויות של המחשב ולתקוף אותן, משחק תורות אומר
+              שבכל פעם שאנחנו תוקפים או מגנים התור עובר לשחקן השני במקרה שלנו
+              המחשב, ובפעם הבאה שנקבל את התור שלנו נשחק עם הדמות הבאה שלנו,
+              במידה והיא עדיין חיה.
+            </li>
+            <li>
+              <span>לוקיגה model</span> - תחילה עלינו לבדוק שב localStorage ישנם
+              הדמויות שנבחרו עבור כל קבוצה.
+            </li>
+            <li>
+              <span>לוקיגה model</span> - השחקן הוא הראשון שמתחיל בכל משחק, לאחר
+              שהשחקן בוחר את אילו מהדמויות הוא רוצה לתקוף באמצעות כפתור תקיפה
+              הוא יכול לתקוף.
+            </li>
+            <li>
+              <span>לוקיגה model</span> - מה זה אומר תקיפה? תקיפה אומר השימוש
+              בכוח של אותה דמות שתוקפת בשביל להוריד נקודות חיים לדמות הנתקפת.
+            </li>
+            <li>
+              <span class="variable-color">תצוגה view</span> - בכל פעם שמתחלף
+              התור נצטרך לרנדר ולהציג כותרת שמעדכנת אותנו את שם הדמות שעכשיו
+              תורה לתקוף.
+            </li>
+
+            <li>
+              <span class="variable-color">תצוגה view</span> - כמו כן נעדכן
+              כותרת משנית שבמידה וזה תור השחקן תראה כותרת "What is the next
+              move?"? ואם זה תורו של המחשב אז "Opponent is thinking..." .
+            </li>
+
+            <li>
+              <span class="variable-color">תצוגה view</span> - שזהו תורו של
+              המשתמש מן הסתם שלוקח זמן לבחור איזה דמות אנחנו רוצים להתקיף לבחור
+              אותה וללחוץ על הכפתור, שזה תורו של המחשב המחשב מסוגל לעשות זאת
+              במאית השניה, כדי לגרום לתחושה של משחקיות וכאילו המחשב באמת חושב
+              איזה דמות עליו לתקוף נוסיף שימוש ב setTimeout לפני כל תור של
+              המחשב.
+            </li>
+            <li>
+              <span class="variable-color">view</span> - על מנת להשאיר את המסך
+              מעודכן עלינו לרנדר מחדש בכל שינוי שנוצר בסטייט שלנו, שימו לב שמתחת
+              לכל תמונה של דמות ישנו גם בר המציג את כמות נקודות החיים של הדמות
+              באחוזים, אם נעדכן אותו ונשתמש באנימציה נוכל לקבל אפקט יפה שיעדכן
+              בצורה נחמדה את המתרחש במשחק.
+            </li>
+          </ul>
+        </div>
+
+        <div class="xl bold padding-top">מהלך המשחק וחוקים</div>
+
+        <p class="padding-top">
+          הראשון לשחק הוא המשתמש, אנחנו מציבים בפניו 2 אופציות לתקוף או להגן, אם
+          הוא בוחר לתקוף עליו תחילה לבחור איזה מן הדמויות של המחשב ברצונו לתקוף.
+        </p>
+
+        <p class="padding-top">
+          אם השחקן בחר לתקוף נעשה חישוב רנדומלי של כוח התקיפה של הדמות הנוכחית
+          שלנו ונחסיר לדמות שבחרנו להתקיף את אותו כוח תקיפה מנקודת החיים שלה, כך
+          בעצם נגרום לירידה בנקודות החיים של דמות המחשב.
+        </p>
+
+        <p class="padding-top">
+          אם השחקן בחר להגן, הדמות הנוכחית המשחקת תקבל תמלא לעצמה נקודות חיים
+          ("תתרפא") ותעביר תור למחשב.
+        </p>
+
+        <p class="padding-top">
+          בגלל שזהו משחק תורות בכל פעם שיגיע תורנו הדמות שאיתה נשחק תהיה הדמות
+          הבאה (שעדיין חיה) אצלנו ברשימת הדמויות, מכיוון שיש רק חמישה דמויות
+          ברגע שנגיע שתם התור של הדמות החמישית יחזור התור בחזרה לדמות הראשונה
+          וכך במעגלים כל לדמויות כמובן יש עדיין נקודות חיים.
+        </p>
+
+        <p class="padding-top">
+          שימו לב שעל מנת לגרום לדבר הזה לקרות תצטרכו לרשום פונקציה חכמה שתעזור
+          לכם להבין מי הדמות הבאה שאליה עובר התור, באותה לוקיגה ישתמש גם המחשב
+          כדי להבין איזה דמות הבאה יש עליו להתקיף, דמות שעדיין יש לה נקודות
+          חיים, כי אנחנו לא רוצים שהמחשב ינסה להתקיף דמות שכבר לא במשחק.
+        </p>
+
+        <p class="padding-top">
+          שימו לב שבתחילת משחק עליכם להוסיף לכל הדמויות שנבחרו למשתמש ולמחשב שדה
+          חדש בשם isEliminated שתעזור לכם לדעת האם הדמות כבר חוסלה או לא.
+        </p>
+
+        <p class="padding-top">
+          המשחק מסתיים ברגל שלמחשב או לנו אין דמויות לשחק איתם.
+        </p>
+
+        <div class="bold xl padding-top">נוסחאות</div>
+        <p class="padding-top">
+          נוסחה לחישוב כוח התקפה - מספר רנדומלי בין ערך המינימום כוח התקפה
+          למקסימום כוח התקפה.
+          <br />
+          <span class="variable-color">randomDmg</span> =
+          <span class="function-color">random</span> (<span
+            class="variable-color"
+            >base_attack_min</span
+          >,<span class="variable-color">base_attack_max</span>)
+        </p>
+
+        <p class="padding-top">
+          נוסחה לחישוב כוח הגנה - מספר שהוא הכפולה שבין
+          <br />
+          <span class="variable-color">healAmount</span> =
+          <span class="variable-color">base_armor</span> *
+          <span class="variable-color">base_health_regen</span>
+        </p>
+
+        <div class="bold xl padding-top">בדיקות / ולידאציות</div>
+
+        <p class="padding-top">
+          שימו לב שזה תורו של השחקן עלינו לוודא שהדמות שאנחנו בוחרים ורוצים
+          לתקוף היא דמות שנשארו לה עדיין נקודות חיים, שימו לב שאתם מוסיפים איזה
+          ערך מסויים שיעזור לכם לדעת האם דמות כבר אינה יכולה לשחק עוד
+          <span class="variable-color">isEliminated</span> למשל.
+        </p>
+
+        <p class="padding-top">
+          מה קורה אם השחקן בחר להגן ולרפא את הדמות שזו היא תורה והדמות לא צריכה
+          ריפוי? משמע נקודות החיים שלה מלאות כבר לדוגמה 200/200 ? שימו לב שאתם
+          לא מוסיפים לה נקודות חיים מעבר למקסימום האפשרי.
+        </p>
+
+        <p class="padding-top">
+          מה קורה בזמן שסיימנו את התור שלנו ועכשיו זה התור של המחשב לשחק? האם
+          אנחנו יכולים להמשיך וללחוץ על כפתורים או אפילו לנסות לבחור אחת
+          מהדמויות של המחשב בזמן שזה לא התור שלנו?
+        </p>
+        <p class="padding-top">
+          אם דמות הובסה, משמע כמות נקודות החיים שלה הגיע ל - 0 האם אפשר לבחור
+          אותה? איך אפשר להראות דמות שהובסה בצורה שתהיה מספיק ברורה שהדמות הובסה
+          ואין בה עוד שימוש עד סוף המשחק?
+        </p>
+
+        <div class="xl bold padding-top">בונוס:</div>
+        <ul>
+          <li>
+            1. כאשר מחשבים את כוח התקיפה , הוסיפו עוד אטריבוט שנקרא קריטיקל
+            critical, האטריבוט הזה באופן רנדומלי יחליט אם כוח התקיפה הבאה יהיה
+            כפול בכוחו.<br />
+            משמע אם לדמות שלנו יש מינימום כוח התקפה של 20 ומקסימום 40, ונקבע
+            שהכוח התקפה שאיתו אנחנו תוקפים הוא 30, אם האטריבוט קריטיקל יצא באופו
+            רנדומלי חיובי, כוח ההתקפה יהיה כפול:60.
+          </li>
+          <li>
+            2.הוסיפו מערך בשם gameLogs שמחזיק בתוכו את כל מהלכי המשחק ודאגו
+            לרנדר את הלוגים האלו בכל פעם שנגמר תור.
+            <br />
+            למשל
+            <br />
+            <span class="orange-f" style="direction: ltr"
+              >`16:50:16 => Bounty Hunter attacked Phantom Assassin with 34
+              damage.`
+            </span>
+            <br />
+            <span style="direction: ltr">
+              `16:50:19 => Zeus choose to defense and heal with 22 hp`
+            </span>
+          </li>
+          <li>
+            3. למחשב עד כה רק האופציה להתקיף, אפשרו למחשב גם את האופציה להחליט
+            בצורה רנדומלית האם להגן.
+          </li>
+        </ul>
+
+        <div class="bold xl">סידור הספרייה</div>
+
+        <div>
+          <pre><code class="language-html">
+dota-game
+├── public
+│   ├── favicon.ico
+│   ├── home.html
+│   ├── selection.html
+│   ├── game.html
+│   └── results.html
+└── src
+    ├── assets
+    ├── css
+    ├── lib
+    ├── mock.js
+    ├── model.js
+    ├── view.js
+    └── controller.js
+
+          </code></pre>
+        </div>
+
+        <div class="padding-top x5 bold">בהצלחה</div>
+        <div class="padding-top lg bold">
+          כל שאלה שיש לכם בניסיון כתיבת המשחק ופתרונו אתם מוזמנים ליצור עם
+          דוקטור קוד קשר ישירות באחד מהערוצים שלנו בדיסקורד או ביוטיוב
+        </div>
+        <div class="navigation-buttons">
+          <a href="https://www.doctorcode.org/free-online-courses.html">
+            <div class="custom-button">חזרה לעמוד הקורסים</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/prism.min.js"></script>
+  </body>
+</html>

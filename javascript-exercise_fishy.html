@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>גאווה סקריפט פרוייקט גמר א' משחק יריות</title>
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_fishy.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_fishy.html"
+    />
+    <meta
+      property="og:title"
+      content="ג'אווה סקריפט המדריך המלא 2023 - גאווה סקריפט פרוייקט גמר א' משחק יריות"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - גאווה סקריפט פרוייקט גמר א' משחק יריות"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ג'אווה סקריפט המדריך המלא 2023 - גאווה סקריפט פרוייקט גמר א' משחק יריות"
+    />
+    <meta
+      name="description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - גאווה סקריפט פרוייקט גמר א' משחק יריות"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="">
+      <div class="fishy-game">
+        <img src="imgs/fishy.webp" alt="fishy game" width="100%" />
+      </div>
+    </section>
+
+    <section class="semi-h">
+      <div class="container">
+        <h1 class="x5 padding-top bold">פרוייקט גמר א'- משחק יריות</h1>
+        <div class="separator green"></div>
+
+        <div class="padding-top">
+          <p>
+            1. דבר ראשון, כנסו וצפו בעיצוב המלא באתר פיגמה, תקבלו השראה ותנסו
+            להבין איך אתם הולכים לפרק את העיצוב ולבנות את המשחק באופן הכי נכון.
+          </p>
+          <p>
+            2. לאחר שהבנתם ואתם מוכנים להרפתקאה, תורידו את קבצי הפרוייקט ההתחלתי
+            על ידי לחיצה על כפתור ההורדה
+          </p>
+          <p>
+            3. אתם יותר ממוזמנים לנסות לשחק במשחק ולהבין את החוקיות, כי אין כמו
+            2 דקות משחק כדי להבין בידיוק מה עליכם לעשות.
+          </p>
+          <p>
+            4. אחרי שראיתם את העיצוב ושיחקתם במשחק עצמו הגיע הזמן להתחיל לקרוא
+            את ההוראות להכנה!
+          </p>
+        </div>
+
+        <div class="navigation-buttons padding-top">
+          <a
+            href="https://github.com/drcodecamp/js-course-fishy/archive/refs/heads/master.zip"
+            target="_blank"
+          >
+            <div class="custom-button">הורדת קבצים</div>
+          </a>
+          <a
+            href="https://www.figma.com/file/XHJOfeewkSZan6dy4cggYa/fishy-game?node-id=0%3A19&t=JBtnuTel5ejONKzi-1"
+            target="_blank"
+          >
+            <div class="custom-button">צפייה בעיצוב</div>
+          </a>
+          <a
+            href="https://drcodecamp.github.io/js-course-fishy/"
+            target="_blank"
+          >
+            <div class="custom-button">לינק למשחק</div>
+          </a>
+          <a
+            href="https://github.com/drcodecamp/js-course-fishy"
+            target="_blank"
+          >
+            <div class="custom-button">לינק לפיתרון</div>
+          </a>
+        </div>
+
+        <div class="padding-top">
+          <h2 class="xl">מטרת המשחק</h2>
+          <p class="padding-top">
+            מטרת המשחק היא להצליח להגן על הגיבור שלנו מגלי האוייבים שמגיעים
+            ומנסים לתקוף אותו. הגיבור שלנו מצוייד בנשקים חצי אוטומטיים מהסוג
+            הטוב ביותר, בעזרת העכבר נוכל להזיז את הגיבור שלנו על ציר הY משמע
+            למעלה ולמטה ובמאצעות מקש הרווח נשחרר יריות בצורה אוטומטית שיפגעו
+            ויחסלו את האוייבים המרושעים!
+          </p>
+        </div>
+        <div style="padding-top: 50px">
+          <h2 class="xl">
+            עמוד משחק <span class="orange-f">(index.html)</span>
+          </h2>
+          <div class="separator green"></div>
+
+          <iframe
+            style="border: 1px solid var(--bg-secondary)"
+            width="100%"
+            height="550"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXHJOfeewkSZan6dy4cggYa%2Ffishy-game%3Fnode-id%3D0%253A3%26t%3DJBtnuTel5ejONKzi-1"
+            allowfullscreen
+          ></iframe>
+
+          <div class="padding-top bold lg text-danger">
+            בפרויקט זה נבחר שלא לעבוד עם ארכיטקטורת MVC.
+          </div>
+
+          <div class="bold xl">סידור הספרייה</div>
+          <div>
+            <pre><code class='language-html'>
+fishy-game
+│
+├── assets
+│   ├── background.webp
+│   ├── bubble.webp
+│   ├── bullet.webp
+│   ├── effect.webp
+│   ├── enemy_a.webp
+│   ├── enemy_b.webp
+│   ├── enemy_c.webp
+│   ├── hero_idle.webp
+│   ├── hero_shoot.webp
+│   ├── super_bullet.webp
+│   ├── super_power.webp
+│   └── mini_gun.webp
+│
+├── .prettierrc.json
+├──  index.css
+├──  index.html
+└──  index.js
+          </code></pre>
+          </div>
+        </div>
+
+        <div class="xl bold padding-top">אלמנטים סטטים</div>
+        <p class="padding-top">
+          הרקע - אין שום תנועה ברקע, הרקע הוא סך הכל תמונה אשר תופסת את כל רוחב
+          וגובה המסך שלנו.
+        </p>
+        <p class="padding-top">
+          טקסט המשחק - טקסט עם שם המשחק תמיד יופיע באותו המקום.
+        </p>
+        <p class="padding-top">
+          בר עליון - תמיד יופיע בר שחור חצי שקוף שבתוכו יש אלמנטים דינאמיים.
+        </p>
+        <p class="padding-top">
+          טקסט כפתורים - טקסט שמופיע באמצע ובתחתית המסך, טקסט שמתאר איזה כפתור
+          עושה איזו פעולה, בצבע ירוק בהיר.
+        </p>
+        <p class="padding-top">
+          חלקיקים - על אף שהם זזים הם עדיין נחשבים לנו סטטים כי האלמנט עצמו לא
+          זז לשום מקום החלקיקים זה משהו שמוגדר לכם כבר מראש והוא אחראי על להזיז
+          דגים חמודים ברקע לצורך לוק אנד פיל.
+        </p>
+
+        <div class="xl bold padding-top">אלמנטים דינאמיים</div>
+        <p class="padding-top">
+          גיבור המשחק - דמות הגיבור שלנו תמיד תופיע על המסך, תחילה היא לא תזוז
+          עד שלא נתחיל לשחק באמצעות כפתור ההתחלה.
+        </p>
+        <p class="padding-top">
+          הדמות שלנו יכולה לנוע רק בציר אחד הציר האנכי, ציר ה Y.
+        </p>
+        <p class="padding-top">
+          טקסט אוייבים שנותרו - טקסט שמופיע רק לאחר שהתחלנו את המשחק, הטקסט הזה
+          מתעדכן בהתאם לאורך מערך האוייבים שעדיין חיים.
+        </p>
+        <p class="padding-top">
+          אוייבים - האוייבים של המשחק הלא הם הכריש, הפירנות והפיראט, הם דינאמיים
+          כי הם זזים מצד ימין מחוץ למסך לעבר הדמות שלנו.
+        </p>
+        <p class="padding-top">הכדורים - הכדורים הם אלמנטים דינאמיים</p>
+        <p class="padding-top">
+          המחסנית - המחסנית מופיעה ומעדכנת בהתאם לכדורים שלא נורו עדיין.
+        </p>
+
+        <p class="padding-top">
+          טקסט כוח על - טקסט שמופיע בצבע ירוק כאשר אנחנו יכולים להשתמש בכוח על,
+          כוח על פשוט מכפיל את כמות הנזק שהכדורים שלנו עושים לזמן מוגבל.
+        </p>
+
+        <h2 class="padding-top xl">עמוד המשחק בזמן פעולה</h2>
+        <div class="separator green"></div>
+
+        <iframe
+          class="padding-top"
+          style="border: 1px solid var(--bg-secondary)"
+          width="100%"
+          height="550"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXHJOfeewkSZan6dy4cggYa%2Ffishy-game%3Fnode-id%3D0%253A19%26t%3DJBtnuTel5ejONKzi-1"
+          allowfullscreen
+        ></iframe>
+
+        <div class="xl bold padding-top">מהלך המשחק וחוקים</div>
+
+        <p class="padding-top">
+          המשחק משוחק ללא זמן מוגבל, האוייבים מתחילים בצד ימין הרחק מגבולות המסך
+          במרחקים רנדומליים ומתקדמים כל אוייב בקצב רנדומלי שונה אך מתוך טווח
+          מסויים.
+        </p>
+
+        <p class="padding-top">
+          כאשר אנו מזהים דמות אוייב בטווח משמע היא נכנסה למסך אנחנו יכולים לירות
+          באמצעות לחיצה על העכבר.
+        </p>
+
+        <p class="padding-top">
+          כל כדור שפוגע בדמות אוייב מוריד לה את כמות החיים שיש לה, ברגע שאין לה
+          עוד חיים, אנחנו צריכים למחוק אותה מהמסך, ולמחוק אותה מהמערך של
+          האוייבים.
+        </p>
+
+        <p class="padding-top">
+          יש לנו אופציה כל כמה שניות להפעיל כוח עזר שיכפיל או ישלש תלוי בכם את
+          כוח הכדורים כך שתוכלו לחסל בהרבה פחות כדורים את האוייבים.
+        </p>
+
+        <p class="padding-top">
+          ברגע שכל האוייבים חוסלו, אנחנו עוצרים את המשחק, מאפסים את ההגדרות
+          שצריך לאפס, וממשיכים עם כמות גדולה יותר של אוייבים, עד שאנחנו מגיעים
+          לכמות סופית של 50 אוייבים אם זו אכן הכמות, אנחנו מציגים למשתמש טקסט
+          שהוא סיים את המשחק ומציגים לו את אותו כפתור של התחל מחדש.
+        </p>
+
+        <p class="padding-top">
+          מספיק שאחת מדמויות האוייבים תגיע לקו שבו שדמות הגיבור שלנו נמצאת,
+          נפסלנו. שימו לב ציר ה X.
+        </p>
+
+        <div class="bold xl padding-top">בדיקות / ולידאציות</div>
+        <p class="padding-top">
+          שימו לב שעל מנת שהמשחק יעבוד בצורה תקינה נצטרך לעבוד הרבה על ולידציות,
+          למשל:
+        </p>
+
+        <p class="padding-top">
+          מה קורה לכדור שלא פגע בשום אוייב ויצא מחוץ לגבולות המסך? במקרה שלנו
+          אנחנו רוצים לבצע קונספט שנקרא object pooling.
+          <br />
+          בקונספט הזה אנחנו מייצרים מראש את כמות הכדורים למשל 40 כדורים, ואנחנו
+          ממקמים אותם מחוץ למסך מצד שמאל.
+          <br />
+          כאשר אנחנו יורים כדור, וכאשר הוא יוצא מהמסך או פוגע בדמות אוייב, עלינו
+          להפוך את הכדור למשומש, isUsed.
+          <br />
+          ברגע שכדור משומש אנחנו לא יכולים להשתמש בו שוב, עד שכל הכדורים
+          משומשים, ברגע שכל הכדורים משומשים אנחנו צריכים לטעון אוטומטית את
+          המחסנית חזרה.
+          <br />
+          מזה אומר? שאנחנו מעדכנים שוב לכל הכדורים שהם לא בשימוש, וששוב המיקום
+          ההתחלתי שלהם הוא מצד שמאל מחוץ למסך.
+          <br />
+          כמובן ברגע שאנחנו יורים כל כדור אנחנו בוחרים את נקודת ההתחלה שתהיה
+          נקודת המוצא הנוחכית של הדמות הראשית שלנו, ומשם אנחנו מתחילים להזיז כל
+          כדור על ציר ה X.
+          <br />
+          מן הסתם כדורים עפים כביכול ישר.
+        </p>
+
+        <p class="padding-top">
+          רק אם המשחק רץ, אנחנו בכלל יכולים להתחיל לירות, כנל שהמשחק נעצר.
+        </p>
+
+        <p class="padding-top">
+          אם כדור פגע בדמות, הכדור אמור להפוך ל isUsed, כדי שהכדור לא ימשיך
+          ויפגע בעוד דמויות שנמצאות אחריו.
+        </p>
+
+        <div class="bold xl padding-top">אתגרים</div>
+
+        <p class="padding-top">
+          האתגר הראשון שלכם, יהיה למצוא דרך לחשב מתי אלמנט מסויים חופף במיקומו
+          עם אלמנט אחר, זה בשביל לחשב מתי כדור בעצם פוגע באוייב.
+        </p>
+        <p class="padding-top">
+          בחבילת ה starter-pack צירפתי לכם כבר את כל הפונקציות הנדרשות כדי
+          שהמשחק יעבוד אבל כמובן שהם ריקות, וגם צירפתי לכם קובץ CSS מלא.
+          <br />
+          אם אתם רוצים אתגר אמיתי נסו ליצור את העיצוב לגמרי בעצמכם עם קובץ css
+          חדש.
+        </p>
+        <p class="padding-top">
+          אתגר נוסף יהיה לבצע object pooling בצורה נכונה זה קונספט שלרוב לא
+          משתמשים בו בג'אווה סקריפט, אבל הוא עוצמתי מאד.
+        </p>
+
+        <p class="padding-top">
+          אתגר נוסף יהיה לדעת איך לייצר אינטרוולים שיזיזו את כל אחד מהאלמנטים
+          הנדרשים, ממליץ לכם לפרק את המשחק למספר פונקציות אינטרוול שונות:
+          <br />
+          פונקציית אינטרוול שמזיזה את הכדורים בנפרד.
+          <br />
+          פונקציית אינטרוול שמזיזה את האוייבים בנפרד.
+          <br />
+          פונקציית אינטרוול שבודקת על בסיס מאד מהיר האם ישנו כדור כלשהו שמתנגש
+          בדמות אוייב כלשהיא.
+          <br />
+          פונקציית אינטרוול שבודקת על בסיס מהיר מאד מתי על המחשב להתחיל תהליך של
+          טעינת המחסנית מחדש.
+          <br />
+          פונקציית אינטרוול שאחראית להמשיך לירות כל עוד אנחנו ממשיכים ללחוץ על
+          כפתור השמאלי בעכבר.
+        </p>
+
+        <p class="padding-top">
+          האתגר הכי גדול במשחק הזה הוא לדעת לעדכן בצורה נכונה את האלמנטים, כך
+          שהמשחק לא יראה שבור, קל מאד להגיע למצב שבו הכדורים ממשיכים להיות
+          מוצגים על המסך כאשר למשל המשחק נגמר, זה ידרוש מכם לחשוב מחוץ לקופסא.
+        </p>
+
+        <div class="xl bold padding-top">בונוס:</div>
+        <ul>
+          <li>הוסיפו מוסיקת רקע ברגע שמתחילים לשחק במשחק.</li>
+          <li>הוסיפו אולי צלילי ירי כל זמן שאנחנו יורים בעוזי האוטומטי.</li>
+          <li>
+            נסו ליצור משחק שכיף לשחק זה לא קשה שימו לב בעיקר לערכים המהירות של
+            הדמויות והמהירות של ה intervals.
+          </li>
+        </ul>
+        <div class="padding-top x5 bold">בהצלחה</div>
+        <div class="padding-top lg bold">
+          כל שאלה שיש לכם בניסיון כתיבת המשחק ופתרונו אתם מוזמנים ליצור עם
+          דוקטור קוד קשר ישירות באחד מהערוצים שלנו בדיסקורד או ביוטיוב
+        </div>
+
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_final.html">
+            <div class="custom-button">חזרה לעמוד סיכום</div>
+          </a>
+          <a href="./javascript-exercise_dota.html">
+            <div class="custom-button">המשך לפרוייקט גמר ב'</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/prism.min.js"></script>
+  </body>
+</html>

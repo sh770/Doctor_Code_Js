@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 37 הזזת איבר במערך</title>
+
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_37.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_37.html"
+    />
+    <meta
+      property="og:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 37 הזזת איבר במערך"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      name="description"
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך לקבל מערך של מספרים, נרשום פונקציה אשר תפקידה לקבל את המערך שקלטנו ולהזיז איברים ממיקום א' למיקום ב'"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-995149719");
+    </script>
+
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">37/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 74%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span style="color: #ff4640"
+            >מערכים</span
+          >
+          תרגיל מספר 37 הזזת איבר במערך
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נלמד איך לקבל מערך של מספרים, נרשום פונקציה
+          אשר תפקידה לקבל את המערך שקלטנו ולהזיז איברים ממיקום א' למיקום ב'
+        </h2>
+
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. create this array
+            <span class="string">[10, 20, 30, 50, 60, 90]</span> and save it as
+            <span class="variable-color">numArray</span>.
+          </li>
+          <li class="exercise-question">
+            b. write a function
+            <span class="function-color">move()</span> that expect 2 parameters
+            <span class="variable-color">from</span> and
+            <span class="variable-color">to</span>.
+          </li>
+          <li class="exercise-question">
+            c. switch between the elements, e.g , move(0,3) will result with
+            [50,20,30,10,60,90].
+          </li>
+
+          <li class="exercise-question">
+            b. first use <span class="function-color">for</span> or
+            <span class="function-color">while</span> loops then learn to use
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"
+            >
+              <span class="function-color">array.splice()</span>.
+            </a>
+          </li>
+        </ul>
+
+        <div style="display: none; width: 100%" id="result">
+          <pre><code class="language-js">
+let numArray = [10, 20, 30, 50, 60, 90]
+const move = (from, to) => {
+    let temp = numArray[from]
+    numArray[from] = numArray[to]
+    numArray[to] = temp
+}
+move(0, 3)
+console.log('my array after movement is:', numArray)
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_36.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_38.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

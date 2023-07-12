@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 7 ניהול תקציב</title>
+    <link
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_7.html"
+      rel="canonical"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_7.html"
+      property="og:url"
+    />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      property="og:title"
+    />
+    <meta
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 7 ותק נהיגה"
+      property="og:description"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+      property="og:image"
+    />
+    <meta content="1000" property="og:image:width" />
+    <meta content="667" property="og:image:height" />
+
+    <meta content="דוקטור קוד" property="og:site_name" />
+    <meta content="he" property="og:locale" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      name="twitter:title"
+    />
+    <meta
+      content="בתרגיל ג'אווה סקריפט הבא נשאל את המשתמש בכמה ביטקוין הוא מחזיק, אם הוא יכניס מספר חיובי נשאל אותו כמה ביטקוין הוא רוצה למשוך, לבסוף נדפיס את יתרת חשבונו."
+      name="description"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <noscript
+      ><img
+        height="1"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+        style="display: none"
+        width="1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">7/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 14%"></div>
+        </div>
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span>תנאים</span> תרגיל מספר 7
+          ניהול תקציב
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נשאל את המשתמש בכמה ביטקוין הוא מחזיק, אם הוא
+          יכניס מספר חיובי נשאל אותו כמה ביטקוין הוא רוצה למשוך, לבסוף נדפיס את
+          יתרת חשבונו.
+        </h2>
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. <span class="prompt-color">prompt</span> the user and ask him how
+            many bitcoins he has saved as
+            <span class="variable-color">btcAmount</span>.
+          </li>
+          <li class="exercise-question">
+            b. if the user enters a positive number, ask him how many bitcoins
+            he would like to withdraw now.
+          </li>
+          <li class="exercise-question">
+            c. <span class="print-color">print</span> the final balance after
+            the user withdraw amount.
+          </li>
+          <li class="exercise-question">
+            d. <span class="bonus-color">Bonus:</span> if the user asks to
+            withdraw more than his total balance,
+            <span class="alert-color">alert</span> him that he has
+            <span class="string">"insufficient balance"</span>.
+          </li>
+        </ul>
+
+        <div id="result" style="display: none; width: 100%">
+          <pre><code class="language-js">
+var btcAmount = +prompt('How many bitcoins do you have?')
+if (btcAmount) {
+    var withdraw = +prompt('How many bitcoins you like to withdraw?')
+    if (btcAmount < withdraw) {
+        alert('insufficient balance')
+    } else {
+        btcAmount -= withdraw
+    }
+}
+console.log('Final bitcoin balance is: ', btcAmount)
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="javascript-exercise_6.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="javascript-exercise_8.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 11 בדיקת גילאים</title>
+
+    <link
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_11.html"
+      rel="canonical"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_11.html"
+      property="og:url"
+    />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      property="og:title"
+    />
+    <meta
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 11 בדיקת גילאים"
+      property="og:description"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+      property="og:image"
+    />
+    <meta content="1000" property="og:image:width" />
+    <meta content="667" property="og:image:height" />
+
+    <meta content="דוקטור קוד" property="og:site_name" />
+    <meta content="he" property="og:locale" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      name="twitter:title"
+    />
+    <meta
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך לתשאל את המשתמש את גילו ולהשתמש בפונקציה אשר תקבל את ערך התשובה של המשתמש, תבדוק אותה עם תנאי ואף תשתמש בפונקציה נוספת לקבוע האם למשתמש מותר לצפות בסרט מסויים."
+      name="description"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <noscript
+      ><img
+        height="1"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+        style="display: none"
+        width="1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">11/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 22%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span class="orange-f"
+            >פונקציות</span
+          >
+          תרגיל מספר 11 בדיקת גילאים
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נלמד איך לתשאל את המשתמש את גילו ולהשתמש
+          בפונקציה אשר תקבל את ערך התשובה של המשתמש, תבדוק אותה עם תנאי ואף
+          תשתמש בפונקציה נוספת לקבוע האם למשתמש מותר לצפות בסרט מסויים.
+        </h2>
+
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. write a function
+            <span class="function-color">isUserAllowedWatching()</span> which
+            expects a <span class="variable-color">userAge</span> as argument.
+          </li>
+          <li class="exercise-question">
+            b. check if <span class="variable-color">userAge</span> is greater
+            than > 13 years old if so it returns
+            <span class="function-color">true</span> else
+            <span class="function-color">false</span>.
+          </li>
+          <li class="exercise-question">
+            c. write another function
+            <span class="function-color">getUserAge()</span> that prompts the
+            user to enter his age then use
+            <span class="function-color">isUserAllowedWatching()</span>
+            function.
+          </li>
+          <li class="exercise-question">
+            d. based on the result <span class="alert-color">alert</span> if the
+            user has permissions to watch the movie or not!
+          </li>
+        </ul>
+
+        <div id="result" style="display: none; width: 100%">
+          <pre><code class="language-js">
+function getUserAge() {
+    var userAge = prompt('What is your age?')
+    var isAllowedWatching = isUserAllowedWatching(userAge)
+    console.log(isAllowedWatching ? 'Allowed' : 'Not Allowed!')
+}
+
+function isUserAllowedWatching(userAge) {
+    return userAge > 13
+}
+
+getUserAge()
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_10.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_12.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

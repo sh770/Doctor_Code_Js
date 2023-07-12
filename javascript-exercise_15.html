@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 15 לולאת for</title>
+
+    <link
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_15.html"
+      rel="canonical"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_15.html"
+      property="og:url"
+    />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      property="og:title"
+    />
+    <meta
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 15 לולאת for"
+      property="og:description"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+      property="og:image"
+    />
+    <meta content="1000" property="og:image:width" />
+    <meta content="667" property="og:image:height" />
+
+    <meta content="דוקטור קוד" property="og:site_name" />
+    <meta content="he" property="og:locale" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      name="twitter:title"
+    />
+    <meta
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך להשתמש בלולאת פור, נלמד את השימושים השונים של הלולאה ובתרגיל הבא נלמד אף איך אפשר להשתמש באינדקס הלולאה בשביל לחשב סכומים או ממוצעים"
+      name="description"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <noscript
+      ><img
+        height="1"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+        style="display: none"
+        width="1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">15/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 30%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span class="primary-color"
+            >לולאות</span
+          >
+          תרגיל מספר 15 לולאת for
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נלמד איך להשתמש בלולאת פור, נלמד את השימושים
+          השונים של הלולאה ובתרגיל הבא נלמד אף איך אפשר להשתמש באינדקס הלולאה
+          בשביל לחשב סכומים או ממוצעים
+        </h2>
+
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. write a function
+            <span class="function-color">sumNumbers()</span> that
+            <span class="prompt-color">prompt</span> the user to enter how many
+            iterations he would like to run, save it as
+            <span class="variable-color">numOfIterations</span>(0-1000).
+          </li>
+
+          <li class="exercise-question">
+            b. <span class="print-color">print</span> all the numbers from 0 to
+            <span class="variable-color">numOfIterations</span> number.
+          </li>
+
+          <li class="exercise-question">
+            c. for example if the user enter 3: <br />
+            <span class="print-color">print</span> the
+            <span class="variable-color">average</span> of this iteration,
+            <span class="string">"The average is: 2"</span> .
+            <br />
+            <span class="print-color">print</span> the
+            <span class="variable-color">totalSum</span> of this iteration,
+            <span class="string">"The total sum is: 6"</span> .
+          </li>
+
+          <li class="exercise-question">
+            f. don't allow the function run if the user enter number above 1000
+          </li>
+        </ul>
+
+        <div id="result" style="display: none; width: 100%">
+          <pre><code class="language-js">
+const sumNumbers = () => {
+    const numOfIterations = +prompt('How many iterations to run?')
+    if (numOfIterations > 1000) {
+        console.error('Too many iterations!')
+        return
+    }
+    let sum = 0
+    for (let i = 1; i <= numOfIterations; i++) {
+        console.log(i)
+        sum += i
+    }
+    console.log('The total sum is:', sum)
+    console.log('The average is:', sum / numOfIterations)
+}
+
+sumNumbers()
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_14.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_16.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

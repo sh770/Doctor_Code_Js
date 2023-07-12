@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta content="website" property="og:type" />
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 1 שימוש במשתנים</title>
+
+    <link
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_1.html"
+      rel="canonical"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_1.html"
+      property="og:url"
+    />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      property="og:title"
+    />
+    <meta
+      content="קורס ג'אווה סקריפט המלא בחינם - תרגיל מספר 1 - שימוש במשתנים | דוקטור קוד"
+      property="og:description"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+      property="og:image"
+    />
+    <meta content="1000" property="og:image:width" />
+    <meta content="667" property="og:image:height" />
+    <meta content="דוקטור קוד" property="og:site_name" />
+    <meta content="he" property="og:locale" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      name="twitter:title"
+    />
+    <meta
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך לקבל ערך ישירות מהמשתמש ולאחר מכן להשתמש באופירטורים השונים כדי לחשב סכומים שונים על סמך הערכים שהתקבלו."
+      name="description"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">1/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 2%"></div>
+        </div>
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br />
+          <span class="orange-f">היכרות</span> תרגיל מספר 1 שימוש במספרים
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נלמד איך לקלוט ערך ישירות מהמשתמש ולאחר מכן
+          להשתמש באופירטורים השונים כדי לחשב סכומים שונים על סמך הערכים שהתקבלו.
+        </h2>
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button onclick="onSolution()">הפעל פתרון</button>
+        </div>
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. <span class="prompt-color">prompt</span> the user to enter a any
+            number, save it as <span class="variable-color">numA</span>.
+          </li>
+          <li class="exercise-question">
+            b. <span class="print-color">print</span> the result of the number
+            in pow2 (3*3 10*10 etc.)
+          </li>
+          <li class="exercise-question">
+            c. <span class="prompt-color">prompt</span> the user to enter 2
+            variables, <span class="variable-color">numB</span> and
+            <span class="variable-color">expo</span>.
+          </li>
+          <li class="exercise-question">
+            d. <span class="print-color">print</span> the pow of those numbers.
+            <span class="string">"3 with exponent power of 4 is: 81"</span>
+          </li>
+        </ul>
+        <div id="result" style="display: none; width: 100%">
+          <pre>
+						<code class="language-js">
+var numA = +prompt('Please enter numA')
+console.log(numA, 'Pow2 is:', numA * numA)
+var numB = +prompt('Please enter numB')
+var expo = +prompt('Please enter for expo')
+console.log(numB , ' with the power of ', expo , ' is:', numB ** expo)
+            </code>
+					</pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="javascript-exercise_2.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        let numA = +prompt("הכנס מספר");
+        console.log(numA * numA);
+        let numB = +prompt("הכנס מספר");
+        let expo = +prompt(" הכנס מספר להכפלה בחזקה ");
+        console.log(numB ** expo);
+        console.log(numB,"with the power of " , expo , numB ** expo);
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

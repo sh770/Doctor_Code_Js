@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+      ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 47 הזמנת כרטיסים לסרט
+    </title>
+
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_47.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_47.html"
+    />
+    <meta
+      property="og:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 47 הזמנת כרטיסים לסרט"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      name="description"
+      content="בפרוייקט הבא נבנה אפליקציה להזמנת כרטיסים לסרט, נלמד איך לרנדר אלמנטים לדום, נלמד איך לרנדר רשימה של סרטים לבחור אחד מהם ולקנות כרטיסים שזה בעצם לבחור כיסאות ולשמר אותם למשתמש כך שאחרים לא יוכלו לקנות אותם גם"
+    />
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">47/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 100%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span class="bold"
+            >בניית אפליקציות</span
+          >
+          הזמנת כרטיסים לסרט
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בפרוייקט הבא נלמד איך לבנות אפליקציה להזמנת כרטיסים לסרט, נלמד איך
+          להציג סרטים שונים למשתמש, ונבנה עמוד בחירת כיסאות בידיוק כמו שאנחנו
+          מזמינים כרטיסים לסרט בסינימה סיטי.
+        </h2>
+        <div class="navigation-buttons padding-top">
+          <a
+            href="https://www.figma.com/file/oE19Rdjc5OAZ1c8pnRiD0V/DRCODE--HTML-CSS?node-id=543%3A406&t=ONFTnuM2TB582aUg-0"
+            target="_blank"
+          >
+            <div class="custom-button">צפה בעיצוב</div>
+          </a>
+
+          <a
+            href="https://github.com/drcodecamp/js-course-cinema"
+            target="_blank"
+          >
+            <div class="custom-button">צפה בפתרון</div>
+          </a>
+          <a
+            href="https://drcodecamp.github.io/js-course-cinema/"
+            target="_blank"
+          >
+            <div class="custom-button">הפעל אפליקציה</div>
+          </a>
+        </div>
+
+        <div class="padding-top">
+          <div class="bold xl padding">עמוד בחירת סרט</div>
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="100%"
+            height="550"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FoE19Rdjc5OAZ1c8pnRiD0V%2FDRCODE--HTML-CSS%3Fnode-id%3D543%253A406%26t%3DONFTnuM2TB582aUg-1"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="bold xl padding">עמוד בחירת כיסאות</div>
+        <div class="padding-top">
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="100%"
+            height="550"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FoE19Rdjc5OAZ1c8pnRiD0V%2FDRCODE--HTML-CSS%3Fnode-id%3D543%253A444%26t%3DONFTnuM2TB582aUg-1"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <ul style="direction: ltr">
+          <li>we are going to write a movie tickets ordering application.</li>
+          <li>
+            clone
+            <a
+              href="https://github.com/drcodecamp/js-course-cinema/blob/master/mock.js"
+              target="_blank"
+              ><span class="function-color">this</span></a
+            >
+            JSON file that contains a list of movies and create a simple tickets
+            order application.
+          </li>
+          <li>
+            you will see that there are no seats at all for any movie, you will
+            have to randomly generate rows and seats for each movie, you can
+            decide for instance that a theater for certain movie has just 3 rows
+            and each has 10 seats in it. or you can create a function that fill
+            it up randomly using min max values.
+          </li>
+          <li>
+            make sure that when the application loads you check if you already
+            generate rows and seats, you dont want to keep regenerate the rows
+            and the seats whenever user is refreshing the page.
+          </li>
+          <li>
+            you will have to populate the rows array with objects, each object
+            should look like this
+            <pre>
+                <code class="language-js">
+{
+    rowNumber: 0,
+    seats: [
+      {
+        seatNumber: 0,
+        isSelected: false,
+        isOccupied: false
+      }
+    ]
+}
+                </code>
+            </pre>
+          </li>
+          <li>
+            In the landing page make a render function that render all movies,
+            also as bonus you can add a filter that show adult and kids movie
+            separately
+          </li>
+          <li>
+            when you click on order tickets on certain movie it will take you to
+            the seat selection page for this movie
+          </li>
+          <li>allow the user select seats that are not already ordered</li>
+          <li>paint "already ordered seats" in yellow</li>
+          <li>
+            allow the user to finish his order and take him back to the main
+            landing page
+          </li>
+          <li>
+            make sure to save everything to
+            <span class="orange-f">localStorage</span> so in the next visit to
+            the same movie we will see that the seats we ordered are no longer
+            available .
+          </li>
+        </ul>
+
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_46.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_final.html">
+            <div class="custom-button">מה הלאה?</div>
+          </a>
+        </div>
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+    <script src="src/prism.min.js"></script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

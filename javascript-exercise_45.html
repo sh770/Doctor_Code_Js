@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 45 משחק שאלות</title>
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_45.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_45.html"
+    />
+    <meta
+      property="og:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 45 משחק שאלות"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      name="description"
+      content="בתרגיל הבא נלמד איך ליצור משחק שמבוסס על שאלות , באמצעות הגרפיקה שהכנו לכם מראש נלמד איך ליצור משחק עם לוגיקה שמאפשרת לנו לענות על שאלות שמוצגות לנו ולתת למשתמש ניקוד בהתאם"
+    />
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">45/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 90%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span class="bold"
+            >בניית אפליקציות</span
+          >
+          משחק ניחושים
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל הבא נלמד איך ליצור משחק שמבוסס על שאלות , באמצעות הגרפיקה
+          שהדוקטור הכין לכם מראש נלמד איך ליצור משחק עם לוגיקה שמאפשרת לנו לענות
+          על שאלות שמוצגות לנו ולתת למשתמש ניקוד בהתאם
+        </h2>
+
+        <div class="navigation-buttons padding-top">
+          <a
+            href="https://www.figma.com/file/oE19Rdjc5OAZ1c8pnRiD0V/DRCODE--HTML-CSS?node-id=543%3A253&t=ONFTnuM2TB582aUg-0"
+            target="_blank"
+          >
+            <div class="custom-button">צפה בעיצוב</div>
+          </a>
+          <a
+            href="https://github.com/drcodecamp/js-course-guessgame"
+            target="_blank"
+          >
+            <div class="custom-button">צפה בפתרון</div>
+          </a>
+          <a
+            href="https://drcodecamp.github.io/js-course-guessgame/"
+            target="_blank"
+          >
+            <div class="custom-button">הפעל אפליקציה</div>
+          </a>
+        </div>
+        <ul style="direction: ltr">
+          <li>
+            Lets create a guess game, we will have 5 questions, each question
+            should contain quote, image, array of answers and an index that
+            points to the correct answer.
+          </li>
+          <li>
+            When we start a game, each time we pick a random question and we're
+            gonna display an image and the quote related to the question, also
+            we need to display the answers as clickable buttons.
+          </li>
+          <li>
+            Use 5 different questions that can be tv shows like friends or video
+            games like you can see in the design (dota 2 game).
+          </li>
+          <li>
+            When the game start the user has to select the correct answer ( show
+            the user at least 2 answers he can pick from).
+          </li>
+          <li>
+            Each time the game start display the questions in random order.
+          </li>
+          <li>
+            Countdown how much time it took to beat the game, using an interval
+            then render it live to the screen.
+          </li>
+          <li>
+            Use a max of 5 questions for the game when the game ends show the
+            user a button where he can start over again.
+          </li>
+        </ul>
+
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_44.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_46.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

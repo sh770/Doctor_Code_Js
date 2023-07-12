@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 46 חנות מחשבים</title>
+
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_46.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_46.html"
+    />
+    <meta
+      property="og:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 46 חנות מחשבים"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      name="description"
+      content="בתרגיל הבא נלמד איך ליצור חנות מחשבים, באמצעות הגרפיקה שהכנו לכם מראש, נלמד גם איך ליצור עגלת קניות שתישמר בין העמודים השונים ולוגיקה של הוספת מוצרים לעגלה"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">46/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 92%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span class="bold"
+            >בניית אפליקציות</span
+          >
+          חנות מחשבים
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל הבא נלמד איך ליצור חנות מחשבים, באמצעות הגרפיקה שהדוקטור הכין
+          לכם מראש, נלמד גם איך ליצור עגלת קניות שתישמר בין העמודים השונים
+          ולוגיקה של הוספת מוצרים לעגלה
+        </h2>
+
+        <div class="navigation-buttons padding-top">
+          <a
+            href="https://www.figma.com/file/oE19Rdjc5OAZ1c8pnRiD0V/DRCODE--HTML-CSS?node-id=543%3A307&t=ONFTnuM2TB582aUg-0"
+            target="_blank"
+          >
+            <div class="custom-button">צפה בעיצוב</div>
+          </a>
+          <a
+            href="https://github.com/drcodecamp/js-course-pcstore"
+            target="_blank"
+          >
+            <div class="custom-button">צפה בפתרון</div>
+          </a>
+
+          <a
+            href="https://drcodecamp.github.io/js-course-pcstore/"
+            target="_blank"
+          >
+            <div class="custom-button">הפעל אפליקציה</div>
+          </a>
+        </div>
+
+        <div class="padding-top">
+          <div class="bold xl padding">עמוד החנות</div>
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="100%"
+            height="550"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FoE19Rdjc5OAZ1c8pnRiD0V%2FDRCODE--HTML-CSS%3Fnode-id%3D543%253A307%26t%3DONFTnuM2TB582aUg-1"
+            allowfullscreen
+          ></iframe>
+          <div class="bold xl padding">עמוד עגלת הקניות</div>
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="100%"
+            height="550"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FoE19Rdjc5OAZ1c8pnRiD0V%2FDRCODE--HTML-CSS%3Fnode-id%3D543%253A379%26t%3DONFTnuM2TB582aUg-1"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <ul style="direction: ltr">
+          <li>
+            clone
+            <span class="function-color"
+              ><a
+                href="https://github.com/drcodecamp/js-course-pcstore/blob/master/mock.js"
+                target="_blank"
+                >this</a
+              ></span
+            >
+            JSON file that contains a list of computers and create a simple
+            e-commerce shop.
+          </li>
+          <li>Use this schema to build up your folder structure first.</li>
+          <li style="list-style: none">
+            <pre><code class="language-html">
+pc-shop
+├── &lt;public>
+│   ├── favicon.ico
+│   ├── shop.html
+│   └── cart.html
+└── &lt;src>
+    │ controller
+   	│   ├─ cart.controller.js
+ 	│   └─ shop.controller.js
+    ├── css
+    ├── lib
+    ├── model
+    │   └─ shop.model.js
+    └── view
+        ├─ cart.view.js
+        └─ shop.view.js
+                </code></pre>
+          </li>
+          <li>
+            this shop application build up from 2 pages, the 1st page is where
+            users can see the list of computers, search and filter them by the
+            computer names and add them into their cart, the 2nd page is the
+            cart page, where they can see all the computers they add into the
+            cart in 1st screen.
+          </li>
+          <li>
+            download and attach <span class="bold">sweet alert</span> javascript
+            library from
+            <span class="function-color">
+              <a
+                href="https://unpkg.com/sweetalert/dist/sweetalert.min.js and put it"
+                target="_blank"
+                >here
+              </a></span
+            >
+            save it inside the <span>lib</span> folder attach it to your
+            shop.html file.
+          </li>
+          <li>
+            use this swal alerts to show the user a notification that his
+            selection added to cart when he click “Add to Cart” button for the
+            selected computer.
+          </li>
+        </ul>
+
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_45.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_47.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 35 איחוד מערכים</title>
+
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_35.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_35.html"
+    />
+    <meta
+      property="og:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 35 איחוד מערכים"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      name="description"
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך לאחד שתי מערכים שונים לידי מערך אחד גדול שכולל בתוכו מופעים בודדים של איברים שחוזרים על עצמם"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-995149719");
+    </script>
+
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">35/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 70%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span style="color: #ff4640"
+            >מערכים</span
+          >
+          תרגיל מספר 35 איחוד מערכים
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נלמד איך לאחד שתי מערכים שונים לידי מערך אחד
+          גדול שכולל בתוכו מופעים בודדים של איברים שחוזרים על עצמם
+        </h2>
+
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+
+        <div style="direction: ltr">
+          <p>Array a ['🧨', '🧨', '🧨', '🧨']</p>
+          <p>Array b ['🍌', '🍌', '🍌', '🧨', '🧨', '💧']</p>
+          <p>Expected result => [🧨,🍌,💧]</p>
+        </div>
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. write a function
+            <span class="function-color">mergeArrays()</span> to merge two
+            arrays and removes all duplicates elements.
+          </li>
+          <li class="exercise-question">
+            b. first use <span class="function-color">for</span> or
+            <span class="function-color">while</span> loops then learn to use
+            <span class="function-color">array.filter()</span> or
+            <span class="function-color">array.concat()</span>.
+          </li>
+        </ul>
+
+        <div style="display: none; width: 100%" id="result">
+          <pre><code class="language-js">
+const array1 = ['🧨', '🧨', '🧨', '🧨']
+const array2 = ['🍌', '🍌', '🍌', '🧨', '🧨', '💧']
+
+// the hard way
+const mergeArrays = (arrayNum1, arrayNum2) => {
+    let arrayNum3 = []
+    arrayNum1.forEach((item) => {
+        arrayNum3.push(item)
+    })
+    arrayNum2.forEach((item) => {
+        arrayNum3.push(item)
+    })
+    return arrayNum3.filter(
+        (value, index) => arrayNum3.indexOf(value) === index
+    )
+}
+// the hard way
+const array3 = mergeArrays(array1, array2)
+console.log('merged cleaned array: array3', array3)
+
+const filterByIndex = (v, i, s) => s.indexOf(v) === i
+
+// easier way
+const array4 = [...array1, ...array2].filter(filterByIndex)
+console.log('using es6 power => ', array4)
+
+// easier way 2
+const array5 = array1.concat(array2).filter(filterByIndex)
+console.log('using es6 concat', array5)
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_34.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_36.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        const array1 = ["🧨", "🧨", "🧨", "🧨"];
+        const array2 = ["🍌", "🍌", "🍌", "🧨", "🧨", "💧"];
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

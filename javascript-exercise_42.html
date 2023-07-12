@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 42 עמוד התחברות</title>
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_42.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_42.html"
+    />
+    <meta
+      property="og:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 42 עמוד התחברות"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      name="description"
+      content="בתרגיל הבא נלמד איך ליצור עמוד התחברות משתמש בצורה קלה על ידי שימוש בעיצוב שהכנו במיוחד עבורכם נלמד איך לבנות כל כפתור וכל אינפוט בצורה מדוייקת שנקראת פיקסל פרפקט"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">42/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 84%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span class="text-danger"
+            >עיצוב CSS</span
+          >
+          תרגיל מספר 42 עמוד התחברות
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          זוכרים את התרגיל הראשון שלכם? יופי בואו ניקח אותו ונוסיף לוגיקה
+          בסיסית, נהפוך את העמוד הזה ואת האינפוטים לפעילים על ידי שימוש בגאווה
+          סקריפט.
+        </h2>
+
+        <div class="navigation-buttons padding-top">
+          <a
+            href="https://www.figma.com/file/oE19Rdjc5OAZ1c8pnRiD0V/html-css?node-id=1%3A2&t=SxUtgBos6wpCHcLS-0"
+            target="_blank"
+          >
+            <div class="custom-button">צפה בעיצוב</div>
+          </a>
+        </div>
+
+        <ul>
+          <li>הוסיפו סקריפט שיבדוק האם המייל תואם ל doctor@gmail.com</li>
+          <li>בדקו גם שהסיסמה תואמת ל medic123</li>
+          <li>
+            אם כן השתמשו ב wep api של הדפדפן והעבירו את המשתמש למסך אחר, כל עמוד
+            שתבנו בשם logged.html
+          </li>
+          <li>
+            שימו לב אם המשתמש כבר התחבר, בעמוד זה logged.html יהיה לו כפתור
+            להתנתקות
+          </li>
+          <li>
+            נסו לשמור את מצב התחברות המשתמש ככה שאם נכנס לעמוד index.html וכבר
+            התחברנו, שבצורה אוטומטית יעביר אותנו הלאה.
+          </li>
+          <li>השתמשו כמובן ב localStorage!</li>
+        </ul>
+
+        <iframe
+          style="border: 1px solid rgba(0, 0, 0, 0)"
+          width="100%"
+          height="550"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FoE19Rdjc5OAZ1c8pnRiD0V%2Fhtml-css%3Fnode-id%3D1%253A2%26t%3D05oLPJYQwHCY3yks-1"
+          allowfullscreen
+        ></iframe>
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_41.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_43.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 36 מילוי מערך</title>
+
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_36.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_36.html"
+    />
+    <meta
+      property="og:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 36 מילוי מערך"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      name="description"
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך למלא מערך ריק  במספרים"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-995149719");
+    </script>
+
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">36/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 72%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span style="color: #ff4640"
+            >מערכים</span
+          >
+          תרגיל מספר 36 מילוי מערכים
+        </h1>
+        <div class="separator green"></div>
+        <h2>בתרגיל ג'אווה סקריפט הבא נלמד איך למלא מערך ריק במספרים</h2>
+
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. <span class="prompt-color">prompt</span> the user to enter how
+            many elements he wants to create in a new array save as
+            <span class="variable-color">numOfElements</span>.
+          </li>
+          <li class="exercise-question">
+            b. write a function
+            <span class="function-color">fillArray()</span> that generate new
+            array, fill it with random numbers, with the
+            <span class="variable-color">numOfElements</span> the user request.
+          </li>
+          <li class="exercise-question">
+            c. <span class="bonus-color">Bonus:</span> make sure only ODD
+            numbers can enter the new array.
+          </li>
+        </ul>
+
+        <div style="display: none; width: 100%" id="result">
+          <pre><code class="language-js">
+const numOfElements = +prompt('What is the size of the array you want?')
+
+const getOddNumber = () => {
+    let odd
+    while (!odd) {
+        const randomNum = getRandomIntInclusive(0, 100)
+        if (randomNum % 2) {
+            odd = randomNum
+        }
+    }
+    return odd
+}
+
+const getRandomIntInclusive = (min, max) =>
+    Math.floor(
+        Math.random() * (Math.floor(max) - Math.ceil(min) + 1) + Math.ceil(min)
+    )
+
+const fillArray = () => {
+    let filledArray = []
+    for (let i = 0; i < numOfElements; i++) {
+        const randomOddNumber = getOddNumber(0, 100)
+        filledArray.push(randomOddNumber)
+    }
+    return filledArray
+}
+
+const filledArray = fillArray()
+console.log('filledArray', filledArray)
+
+/**
+ * Short way not always easier to understand!
+ */
+const filledArray2 = [...Array(numOfElements)].map(() => getOddNumber(0, 100))
+console.log('filledArray2', filledArray2)
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_35.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_37.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

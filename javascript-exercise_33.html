@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 33 משפטים רנדומלים</title>
+
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_33.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_33.html"
+    />
+    <meta
+      property="og:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 33 משפטים רנדומלים"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      name="description"
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך לייצר פונקציה אשר תפקידה יהיה לבחור מילים רנדומליות מתוך מערך של מילים קבוע מראש ולהרכיב מהם משפטים"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-995149719");
+    </script>
+
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">33/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 66%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span style="color: #ff4640"
+            >מערכים</span
+          >
+          תרגיל מספר 33 משפט רנדומלי
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נלמד איך לייצר פונקציה אשר תפקידה יהיה לבחור
+          מילים רנדומליות מתוך מערך של מילים קבוע מראש ולהרכיב מהם משפטים
+        </h2>
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. declare <span class="variable-color">wordBank</span> which is an
+            array of random words for your choose.
+          </li>
+          <li class="exercise-question">
+            a. write a function
+            <span class="function-color">pickRandomWord()</span> that picks
+            random words from <span class="variable-color">wordBank</span>.
+          </li>
+          <li class="exercise-question">
+            b. write a function
+            <span class="function-color"
+              >generateRandomSentence(<span>numOfWords</span>)</span
+            >
+            that generates a sentence using random words.
+          </li>
+          <li>
+            c. <span class="bonus-color">Bonus:</span> remove spaces at the end
+            of the sentence.
+          </li>
+        </ul>
+
+        <div style="display: none; width: 100%" id="result">
+          <pre><code class="language-js">
+const wordBank = [
+    'banana',
+    'is',
+    'in',
+    'economy',
+    'facilities',
+    'services',
+    'necessary',
+    'firms',
+]
+
+const getRandomIntInclusive = (min, max) => {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+const pickRandomWord = () => {
+    const randomIdx = getRandomIntInclusive(0, wordBank.length - 1)
+    return wordBank[randomIdx]
+}
+
+const generateRandomSentence = (numOfWords) => {
+    let sentence = ''
+    for (let i = 0; i < numOfWords; i++) {
+        sentence += ' ' + pickRandomWord()
+        if (i === numOfWords - 1) {
+            sentence += '.'
+        }
+    }
+    return sentence.trim()
+}
+
+const sentence = generateRandomSentence(4)
+console.log(`My sentence is "${sentence}"`)
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_32.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_34.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 18 הדפסת לולאות</title>
+
+    <link
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_18.html"
+      rel="canonical"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_18.html"
+      property="og:url"
+    />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      property="og:title"
+    />
+    <meta
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 18הדפסת לולאות"
+      property="og:description"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+      property="og:image"
+    />
+    <meta content="1000" property="og:image:width" />
+    <meta content="667" property="og:image:height" />
+
+    <meta content="דוקטור קוד" property="og:site_name" />
+    <meta content="he" property="og:locale" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      name="twitter:title"
+    />
+    <meta
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך להדפיס לולאה לתוך הקונסול, נלמד איך להדפיס ציור של משולש ,  משולש סגור ואף יהלום"
+      name="description"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <noscript
+      ><img
+        height="1"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+        style="display: none"
+        width="1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">18/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 36%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span class="primary-color"
+            >לולאות</span
+          >
+          תרגיל מספר 18 הדפסת לולאות
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נלמד איך להדפיס לולאה לתוך הקונסול, נלמד איך
+          להדפיס ציור של משולש , משולש סגור ואף יהלום
+        </h2>
+        <p>
+          על מנת לראות את תוצאות התרגיל יש לפתוח את מערכת הקונסול באמצעות לחיצה
+          על כפתור F12 בדפדפן הכרום
+        </p>
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+
+        <div class="bold xxl">
+          <p>*</p>
+          <p>**</p>
+          <p>***</p>
+          <p>****</p>
+          <p>*****</p>
+        </div>
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. write a function that <span class="print-color">Print</span> a
+            Triangle of Asterisks.
+          </li>
+          <li class="exercise-question">
+            b. <span class="bonus-color">Bonus:</span> add the option to
+            determine triangle length.
+          </li>
+          <li class="exercise-question">
+            c. <span class="bonus-color">Bonus:</span> continue and write a
+            function that close this triangle with reverse count
+          </li>
+        </ul>
+
+        <div id="result" style="display: none; width: 100%">
+          <pre><code class="language-js">
+const printAsterisks = (numOfPrints) => {
+    let currChar = '*'
+    for (let i = 1; i < numOfPrints; i++) {
+        currChar += '*'
+    }
+    console.log(currChar)
+}
+
+const init = () => {
+    const triangleSize = +prompt('What is the triangle size you want?')
+    for (let i = 1; i <= triangleSize; i++) {
+        printAsterisks(i)
+    }
+    for (let i = triangleSize - 1; i > 0; i--) {
+        printAsterisks(i)
+    }
+}
+
+init()
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_17.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_19.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

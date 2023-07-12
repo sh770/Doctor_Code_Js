@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 27 ניקוי מערך</title>
+
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_27.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_27.html"
+    />
+    <meta
+      property="og:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 27 ניקוי מערך"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      name="description"
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך לקבל לרשום פונקציה שמקבלת מערך של מספרים ודואגת לנקות את המערך ממספרים ששווים לאפס ולהחזיר מערך חדש לאחר מכן"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-995149719");
+    </script>
+
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">27/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 54%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span style="color: #ff4640"
+            >מערכים</span
+          >
+          תרגיל מספר 27 ניקוי מערך
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נלמד איך לקבל לרשום פונקציה שמקבלת מערך של
+          מספרים ודואגת לנקות את המערך ממספרים ששווים לאפס ולהחזיר מערך חדש לאחר
+          מכן
+        </h2>
+
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. create a function
+            <span class="function-color">formatArray()</span> that gets an
+            <span class="variable-color">numArray</span> and
+            <span class="variable-color">excludeNum</span> parameter and returns
+            a new array clean of this
+            <span class="variable-color">excludeNum</span>.
+          </li>
+          <li class="exercise-question">
+            b. first use <span class="function-color">for</span> or
+            <span class="function-color">while</span> loops then learn to use
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+            >
+              <span class="function-color">array.filter()</span>.
+            </a>
+          </li>
+          <li class="exercise-question">
+            c. if we want to exclude "0" [0, 1, 0, 5, 6, 7, 9, 4, 2, 0, 0, 0, 1]
+            will become [1, 5, 6, 7, 9, 4, 2, 1] //clean of zeroes.
+          </li>
+        </ul>
+
+        <div style="display: none; width: 100%" id="result">
+          <pre><code class="language-js">
+let numArray = [0, 1, 0, 5, 6, 7, 9, 4, 2, 0, 0, 0, 1]
+
+/**
+ * Level 1 - 8 lines
+ */
+
+const formatArray = (numArray, excludeNum) => {
+    const result = []
+    for (let i = 0; i < numArray.length; i++) {
+        if (numArray[i] !== excludeNum) {
+            result.push(numArray[i])
+        }
+    }
+    return result
+}
+
+console.log(formatArray(numArray, 0))
+
+/**
+ * Level 2 - 4 lines
+ */
+
+const formatArrayTwo = (numArray, excludeNum) => {
+    return numArray.filter((item) => {
+        return item !== excludeNum
+    })
+}
+console.log(formatArrayTwo(numArray, 0))
+
+/**
+ * Level 3 - one line
+ * a - for array
+ * e - for exclude
+ * i - for iteration item
+ */
+const formatArrayThree = (a, e) => a.filter((i) => i !== e)
+console.log(formatArrayThree(numArray, 0))
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_26.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_28.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

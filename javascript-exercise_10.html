@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 10 תנאים מורכבים</title>
+
+    <link
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_10.html"
+      rel="canonical"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_10.html"
+      property="og:url"
+    />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      property="og:title"
+    />
+    <meta
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 10 תנאים מורכבים"
+      property="og:description"
+    />
+    <meta
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+      property="og:image"
+    />
+    <meta content="1000" property="og:image:width" />
+    <meta content="667" property="og:image:height" />
+
+    <meta content="דוקטור קוד" property="og:site_name" />
+    <meta content="he" property="og:locale" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      name="twitter:title"
+    />
+    <meta
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך להגדיר מצבים שונים שדורשים אותו טיפול בקוד במקרים מסויימים, אף נלמד איך להתמודד עם מצב שבו  אנחנו מקבלים ערך לא ידוע."
+      name="description"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <noscript
+      ><img
+        height="1"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+        style="display: none"
+        width="1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">10/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 20%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span>תנאים</span> תרגיל מספר 10
+          תנאים מורכבים
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נלמד איך להגדיר מצבים שונים שדורשים אותו
+          טיפול בקוד במקרים מסויימים, אף נלמד איך להתמודד עם מצב שבו אנחנו
+          מקבלים ערך לא ידוע וכל זאת בשימוש תנאי switch.
+        </h2>
+
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. consider this Tree of colors
+            <div>Red Tree: red, salmon, tomato, crimson</div>
+            <div>Green Tree: green, lime, teal</div>
+            <div>Yellow Tree: gold, yellow, khaki</div>
+          </li>
+          <li class="exercise-question">
+            b. <span class="prompt-color">prompt</span> the user to enter one of
+            his favorite color.
+          </li>
+          <li class="exercise-question">
+            c. <span class="print-color">print</span> the name of the group
+            related to his selection, if the user enters "red", print,
+            <span class="string">"red is part of the red tree"</span>
+          </li>
+          <li class="exercise-question">
+            d. <span class="bonus-color">Bonus:</span> if the user didn't enter
+            any color that we can recognize, <span class="blue-f">print</span>
+            <span class="string">"is that a new color"?</span>
+          </li>
+        </ul>
+
+        <div id="result" style="display: none; width: 100%">
+          <pre><code class="language-js">
+var color = prompt('Please enter your fav color!')
+switch (color) {
+    case 'red':
+    case 'salmon':
+    case 'tomato':
+    case 'crimson':
+        console.log(color, 'Belong to Red Tree.')
+        break
+    case 'green':
+    case 'lime':
+    case 'teal':
+        console.log(color, 'Belong to Green Tree.')
+        break
+    case 'gold':
+    case 'yellow':
+    case 'khaki':
+        console.log(color, 'Belong to Yellow Tree.')
+        break
+    default:
+        console.log('is that a new color?')
+}
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="javascript-exercise_9.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_11.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>

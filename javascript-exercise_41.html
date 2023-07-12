@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 41 חנות ספרים</title>
+
+    <link
+      rel="canonical"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_41.html"
+    />
+    <meta
+      property="og:url"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_41.html"
+    />
+    <meta
+      property="og:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      property="og:description"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 41 חנות ספרים"
+    />
+    <meta
+      property="og:image"
+      content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="667" />
+    <meta
+      name="facebook-domain-verification"
+      content="1eh2cz9h64tmar4i4ppd2tne664suc"
+    />
+    <meta property="og:site_name" content="דוקטור קוד" />
+    <meta property="og:locale" content="he" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+    />
+    <meta
+      name="description"
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך ליצור חנות ספרים, נלמד איך לעבוד עם מערכים ואובייקטים של ספרים איך ליצור פונקציות שמוסיפות ספרים למערך ואיך ליצור פונקציות שמורידות ומעלות את כמות הספרים מהמערך"
+    />
+
+    <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
+    <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-995149719");
+    </script>
+
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
+    /></noscript>
+
+    <style>
+      :root {
+        --text-color-1: #edda40;
+        --text-color-3: #edda40;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <section class="full-h">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between">
+          <div class="bold">התקדמות שלך</div>
+          <div style="font-size: 32px">41/47</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 82%"></div>
+        </div>
+
+        <h1 class="x5 padding-top bold">
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span class="text-success"
+            >אובייקטים</span
+          >
+          תרגיל מספר 41 חנות ספרים
+        </h1>
+        <div class="separator green"></div>
+        <h2>
+          בתרגיל ג'אווה סקריפט הבא נלמד איך ליצור חנות ספרים, נלמד איך לעבוד עם
+          מערכים ואובייקטים של ספרים איך ליצור פונקציות שמוסיפות ספרים למערך
+          ואיך ליצור פונקציות שמורידות ומעלות את כמות הספרים מהמערך
+        </h2>
+
+        <div class="padding-top">
+          <button id="solution-button" onclick="displaySolution()">
+            הצג פתרון
+          </button>
+          <button id="solution-active" onclick="onSolution()">
+            הפעל פתרון
+          </button>
+        </div>
+
+        <ul style="direction: ltr">
+          <li class="exercise-question">
+            a. use this user object.
+            <pre><code class="language-js">
+let user = {
+   id: "b79fee9d-7001-4618-b58f-8b09fbe4f619",
+   name: "doctorcode",
+   balance: 1000,
+   books: [],
+}
+            </code></pre>
+          </li>
+          <li class="exercise-question">
+            b. use this books array.
+            <pre><code class="language-js">
+let bookStore = [
+    {
+        id: 'b79fee9d-7001-4618-b58f-8b09fbe4f615',
+        name: 'Davion the knight',
+        pages: 1800,
+        price: 125.99,
+        quantity: 10,
+        forKids: false,
+    },
+    {
+        id: 'b79fee9d-7001-4618-b58f-8b09fbe4f618',
+        name: 'The Hobbit',
+        pages: 2550,
+        price: 50.5,
+        quantity: 2,
+        forKids: false,
+    },
+    {
+        id: 'b79fee9d-7001-4618-b58f-8b09fbe4f622',
+        name: 'Lord of the rings',
+        pages: 650,
+        price: 75.99,
+        quantity: 88,
+        forKids: false,
+    },
+]
+            </code></pre>
+          </li>
+          <li class="exercise-question">
+            c. write a CRUD functions,create, read, update and delete a book
+            from the <span class="variable-color">bookStore</span>.
+            <span>c</span>reateBook() , <span>r</span>eadBookById() ,
+            <span>u</span>pdateBookById , <span>d</span>eleteBookById.
+          </li>
+          <li class="exercise-question">
+            d. write a function
+            <span class="function-color">buyBookById()</span> which reads a book
+            from the store by its id, check if the book has enough copies left
+            and buys it, buy means quantity decreases and user balance and user
+            books property updates accordingly.
+          </li>
+        </ul>
+
+        <div style="display: none; width: 100%" id="result">
+          <pre><code class="language-js">
+const user = {
+    id: 'b79fee9d-7001-4618-b58f-99665258',
+    name: 'doctorcode',
+    balance: 1000,
+    books: [],
+}
+
+let books = [
+    {
+        id: 'b79fee9d-7001-4618-b58f-8b09fbe4f615',
+        name: 'Davion the knight',
+        pages: 1800,
+        price: 125.99,
+        quantity: 10,
+        forKids: false,
+    },
+    {
+        id: 'b79fee9d-7001-4618-b58f-8b09fbe4f618',
+        name: 'The Hobbit',
+        pages: 2550,
+        price: 50.5,
+        quantity: 2,
+        forKids: false,
+    },
+    {
+        id: 'b79fee9d-7001-4618-b58f-8b09fbe4f622',
+        name: 'Lord of the rings',
+        pages: 650,
+        price: 75.99,
+        quantity: 88,
+        forKids: false,
+    },
+]
+
+const createBook = (book) => {
+    books.push(book)
+}
+
+const readBookById = (bookId) => {
+    const book = books.find((book) => book.id === bookId)
+    return book ? book : {}
+}
+
+const updateBookById = (bookId, updatedBook) => {
+    const bookIdx = books.findIndex((book) => book.id === bookId)
+    books.splice(bookIdx, 1, updatedBook)
+}
+
+const deleteBookById = (bookId) => {
+    const bookIdx = books.findIndex((book) => book.id === bookId)
+    books.splice(bookIdx, 1)
+}
+
+const buyBookById = (bookId) => {
+    const book = books.find((book) => book.id === bookId)
+    if (book.quantity > 0) {
+        book.quantity -= 1
+        user.balance -= book.price
+        user.books.push(book)
+    } else {
+        console.log('Cant purchase at the moment')
+    }
+}
+
+const book = readBookById('b79fee9d-7001-4618-b58f-8b09fbe4f615')
+console.log('user balance before purchase: ',user.balance)
+console.log('before buying, book:',book.name,'has',book.quantity,'pieces left.')
+buyBookById('b79fee9d-7001-4618-b58f-8b09fbe4f615')
+console.log('book:',book.name,'has',book.quantity,'pieces left.')
+console.log('user balance after purchase is: ',user.balance)
+            </code></pre>
+        </div>
+        <div class="navigation-buttons">
+          <a href="./javascript-exercise_40.html">
+            <div class="custom-button">< לשאלה הקודמת</div>
+          </a>
+          <a href="./javascript-exercise_42.html">
+            <div class="custom-button">לשאלה הבאה ></div>
+          </a>
+        </div>
+
+        <div class="lg">שאלות</div>
+        <div class="questions-list lg"></div>
+      </div>
+    </section>
+
+    <script src="src/menu.min.js"></script>
+    <script src="src/util.min.js"></script>
+
+    <script src="src/prism.min.js"></script>
+    <script>
+      const onSolution = () => {
+        /* todo remove this line and start your answer */
+      };
+    </script>
+    <script>
+      addLinksToAllExercise(47, "javascript");
+    </script>
+  </body>
+</html>
