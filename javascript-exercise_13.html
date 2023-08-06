@@ -159,6 +159,17 @@ typeOf(val)
     <script src="src/prism.min.js"></script>
     <script>
       const onSolution = () => {
+        function getVal(){
+          let val = prompt("הכנס ערך")
+          if (val === "true" || val === "false"){
+            console.log("bulian");
+          }else if(+val){
+            console.log("number");
+          }else
+          console.log("string");
+          return typeof(val)
+        }
+        getVal();
         /* todo remove this line and start your answer */
       };
     </script>
